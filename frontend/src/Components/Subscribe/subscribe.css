@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    padding: 25px 0px;
+}
+
+
+.subscribe-form{
+    background-color: #000;
+    display:flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 14px 20px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.subscribe-form .box-field_row {
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.subscribe-form .box-field_row .box-field {
+    width: calc(100% - 186px);
+    width: 100%;
+}
+
+.form-overall{
+    padding-left: 40px;
+    color: rgb(241, 156, 29);
+
+}
+
+.txt-place{
+    text-align: left;
+}
+
+.stay-font{
+    padding: 0px;
+    font-size: 60px;
+    margin-bottom: 2px;
+}
+
+.to-be{
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+.box-field_row{
+    display: flex;  
+    padding-bottom: 10px;
+    
+}
+
+.js-img{
+    height: 240px;
+}
+
+
+.sub-btn {
+    outline: none;
+    border: none;
+    background-color: rgb(241,156,29);
+    padding: 0 35px;
+    font-size: 25px;
+    margin-left: 10px;
+    color: #000;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .3s linear;
+    font-family: 'Amatic SC', cursive;
+}
+.form-input{
+    outline: none;
+    border: none;
+    border-radius:0px ;
+    margin-right: 13rem;
+    padding: 12px 20px;
+    font-size: 25px;
+    color: rgb(52, 24, 19);
+    font-family: 'Amatic SC',cursive;
+    display: inline-block;
+    transition: all .3s linear;
+    width: 100%;
+}
+
+ .box-field .form-input {
+    background: #fff;
+    border: 1px solid #fcedea;
+    /* padding: 18px 29px; */
+    width: 100%; 
+    
+}
+
+
+ @media only screen and (max-width:1000px) {
+    .form-overall{
+        padding-left:22px;
+    }
+    .form-input{
+        margin-right: 15rem;
+        padding: 10px 20px;
+        font-size: 18px;
+        width: 100%;
+    }
+    .js-img{
+        height: 185px;
+    }
+    .sub-btn{
+        /* padding: 0 ; */
+        padding: 0px 42px;
+        font-size: 18px;
+        margin-left: 35px;
+    }
+
+ }
+
+ @media only screen and (max-width:920px) {
+    .wrapper{
+        padding: 20px 50px;
+    }
+    .subscribe-form{
+        padding: 10px 16px;
+    }
+    .form-input{
+        margin-right: 70px;
+        padding: 10px 30px;
+        font-size: 20px;
+    }
+    .js-img{
+        height: 150px;
+    }
+    .sub-btn{
+        padding: 0px 30px;
+        font-size: 20px;
+        margin-left: 35px;
+    }
+
+    .stay-font{
+        font-size: 52px;
+    }
+    
+    .to-be{
+        font-size: 22px;
+    }
+
+ }
+
+ @media only screen and (max-width:750px) {
+    .wrapper{
+        padding: 10px 50px;
+    }
+    .subscribe-form{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .form-overall{
+        padding-left: 0px;
+        padding: 0px;
+    }
+    .box-field_row{
+        flex-direction: column;
+    }
+    .js-img{
+        height: 200px;
+    }
+    .stay-font{
+        font-size: 10vi;
+    }
+    .to-be{
+        font-size: 4vi;
+    }
+
+    .form-input{
+        /* margin: 4px; */
+        font-size: 25px;
+    }
+    .sub-btn{
+        font-size: 35px;
+        /* margin: 4px 0px; */
+        text-align: center;
+    }
+    .subscribe-form .box-field_row .box-field, .subscribe-form .box-field_row .sub-btn {
+        width: 100%;
+        margin: 4px 0px;
+    }
+    .subscribe-form .box-field_row .box-field {
+        width: calc(100% - 62px);
+        width: 100%;
+    }
+ }
+
+ @media only screen and (max-width:500px) {
+    .wrapper{
+        padding: 10px 50px;
+    }
+    .subscribe-form{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .form-overall{
+        padding-left: 0px;
+        padding: 0px;
+    }
+    .box-field_row{
+        flex-direction: column;
+    }
+    .js-img{
+        height: 150px;
+        margin-left: 15px;
+    }
+    .stay-font{
+        font-size: 8vi;
+    }
+    .to-be{
+        font-size: 3vi;
+    }
+
+    .form-input{
+        /* margin: 4px; */
+        font-size: 20px;
+    }
+    .sub-btn{
+        font-size: 30px;
+        /* margin: 4px 0px; */
+        text-align: center;
+    }
+    .subscribe-form .box-field_row .box-field, .subscribe-form .box-field_row .sub-btn {
+        width: 100%;
+        margin: 4px 0px;
+    }
+    .subscribe-form .box-field_row .box-field {
+        width: calc(100% - 62px);
+        width: 100%;
+    }
+ }
+

@@ -1,0 +1,133 @@
+
+nav{
+    background-color: #000000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+nav a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.logo{
+    font-weight:800;
+    height: auto;
+    margin-right: 138px;
+
+}
+.logo > img{
+    width: 200px;
+}
+/* .logo > span{
+    height: 10px;
+    width: 10px;
+    background-color: #27A7CF;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 13px;
+    margin: 4px;
+} */
+.nav-left{
+    display: flex;
+
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-bar *{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.nav-btn{
+    /* border-radius: 5px; */
+    /* padding:10px; */
+    cursor:pointer;
+    border:none;
+    visibility: hidden;
+    opacity:0;
+    margin-left:5px;
+    background-color: #000000;
+}
+.social-icons{
+    display: flex;
+    align-items: center;
+}
+.nav-icon{
+    margin-right: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.span-link{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.FaAlignRight{
+    color: white;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 1020px){
+    .nav{
+        position: fixed;
+    width: -webkit-fill-available;
+    background-color: #ffffff;
+    }
+    .logo{
+        margin-right: 0;
+    }
+    .logo > img {
+        width:150px;
+    }
+    .nav-btn{
+        visibility: visible;
+        opacity:1;
+    }
+
+    .nav-bar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        transition: 1s;
+        transform: translate(-200vh);
+        flex-direction: column;
+        background-color: #0f0e0e;
+color: white;
+z-index: 100;
+    }
+    .responsive-nav{
+        transform: none;
+    }
+
+    .nav-close-btn{
+        position: absolute;
+        top: 1rem;
+    right: 1rem;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    }
+    .nav-icon{
+        margin-right: 10px;
+    font-size: 1rem;
+    }
+}

@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.discount{
+    margin: 15px 0px;
+    background-image: url(ContactUsBG.jpeg);
+    background-size: cover;
+    background-position: center;
+    text-align: -webkit-center;
+}
+
+
+.discount-info{
+    max-width: 400px;
+    padding: 20px 40px;
+    backdrop-filter: blur(10px);
+    background-color: rgb(86 86 86 / 33%);
+}
+
+.saint-text {
+    /* font-family: Mrs Saint Delafield; */
+    font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+    color: rgb(244 189 24);
+    display: block;
+    font-size: 50px;
+}
+
+.discount .main-text {
+    margin-bottom: 20px;
+}
+
+.main-text {
+    display: block;
+    font-family: Tenor Sans;
+    font-weight: 500;
+    color: rgb(249, 99, 17);
+    font-size: 90px;
+    margin-bottom: 30px;
+    margin-top: 4px;
+}
+
+.contact-para {
+    font-size: 19px;
+    padding-left: 5px;
+    color: rgb(164, 121, 34);
+    font-family: 'Alkatra', cursive;
+}
+.discount form {
+    margin-top: 44px;
+}
+
+.Contact-box-field .Contact-control {
+    background: #fff;
+    margin-bottom: 10px;
+    border: 1px solid #fcedea;
+    line-height: 60px;
+    padding: 2px 19px;
+    font-size: 18px;
+    font-family: Lato,sans-serif;
+    width: -webkit-fill-available;
+
+}
+
+.Contact-btn {
+    height: 60px;
+    margin-top: -2px;
+    border: none;
+    background: #0e0d0d;
+    padding: 0 50px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .3s linear;
+    font-family: Lato;
+}
+button, input[type=button], input[type=submit] {
+    cursor: pointer;
+}
+@media only screen and (max-width:550px){
+    .discount{
+        background-image: url(ContactBack.jpg);
+    }
+    .saint-text{
+        font-size: 40px;
+    }
+    .main-text{
+        font-size: 75px;
+    }   
+}

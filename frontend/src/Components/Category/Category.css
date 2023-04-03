@@ -1,0 +1,67 @@
+/* main style */
+/* body {
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+} */
+.grey-background h3 {
+  border: 2px solid #eee;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+}
+.grey-background {
+  padding: 40px 0;
+  background: radial-gradient(
+    120.74% 1304.26% at 0% 0%,
+    rgb(244 189 24) 0%,
+    rgb(241 165 16) 9.51%,
+    rgb(249, 99, 17) 100% );
+}
+/* p {
+  font-family: "Playfair Display", serif;
+} */
+/*boxes*/
+.article-box {
+  position: relative;
+  color: white;
+}
+.article-box .image img {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease;
+}
+.article-box .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 5px 20px -5px rgb(0 0 0 / 10%);
+}
+.article-box:hover .image {
+  box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
+}
+.article-box:hover .image img {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+.article-box .name {
+  position: absolute;
+  bottom: 50px;
+  right: 0px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.075s ease-out;
+  color: rgba(51, 51, 51, 1);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+.article-box .description .text-more {
+  font-size: 11px;
+  color: #333;
+  text-align: right;
+  padding-top: 10px;
+}

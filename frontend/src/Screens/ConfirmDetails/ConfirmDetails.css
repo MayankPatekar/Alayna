@@ -1,0 +1,43 @@
+
+.con-container{
+    max-width: 40rem;
+  padding: 10vw 2rem 0;
+  margin: 0 auto;
+  height: 100vh;
+}
+.shipInfo{
+    margin: 20px 0;
+}
+
+.shipInfo h4{
+    margin: 10px 0;
+}
+
+h4 span{
+    font-weight: 600;
+}
+
+.shipInfo h2{
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.shipInfo hr{
+    height: 3px;
+    width: 100%;
+    /* border-color: black; */
+    background-color: #000000;
+    border: 0;
+    margin: 2rem 0;
+    opacity: 1;
+}
+
+.shipInfo .row img{
+    width: 100%;
+    height: 129px;
+    object-fit: contain;
+}
+
+.total_end{
+    text-align: end;
+}
