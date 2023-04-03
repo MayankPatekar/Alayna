@@ -40,13 +40,16 @@ const NavBar = () => {
       </div>
     </div>
       <div className="social-icons">
-        <Link to="/search"><FaSistrix className="nav-icon"/></Link>
-        <Link to="/wishlist"><FaHeart className="nav-icon"/></Link>
-      <Link to="/cart"><FaShoppingBag className="nav-icon"/><span style={{position: "relative",
+        <Link to="/search"><FaSistrix className="nav-icon" onMouseOver={({target})=>target.style.color="rgb(241, 156, 29)"}
+    onMouseOut={({target})=>target.style.color="white"}/></Link>
+        <Link to="/wishlist"><FaHeart className="nav-icon" onMouseOver={({target})=>target.style.color="red"}
+    onMouseOut={({target})=>target.style.color="white"}/></Link>
+      <Link to="/cart"><FaShoppingBag className="nav-icon" onMouseOver={({target})=>target.style.color="rgb(241, 156, 29)"}
+    onMouseOut={({target})=>target.style.color="white"}/><span style={{position: "relative",
     right: "17px",
     top: "-5px",
     fontSize: "17px",
-    background: "rgb(255,146,27)",
+    background: "rgb(241, 156, 29)",
     color:"black",
     borderRadius: "50px",
     padding: "1px 6px"}}>{cartTotalQuantity}</span></Link>
