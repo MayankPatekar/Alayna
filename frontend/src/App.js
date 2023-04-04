@@ -19,6 +19,7 @@ import ConfirmDetails from './Screens/ConfirmDetails/ConfirmDetails';
 import SharePointScreen from './Screens/SharePointScreen/SharePointScreen';
 import WishListScreen from './Screens/WishListScreen/WishListScreen';
 import SearchScreen from './Screens/SearchScreen/SearchScreen';
+import OrdersScreen from './Screens/OrdersScreen/OrdersScreen';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path='shippingdetails' element={<ShippingDetailScreen />}/>
         <Route path="confirmdetails" element={<ConfirmDetails />}/>
         <Route path='sharepoints' element={<SharePointScreen />} />
+        <Route path='orders' element={<OrdersScreen />} />
       </Route>
       <Route path="/signup" element={<SignUpScreen />}  />
       <Route path='/signin'  element={<SignInScreen />} />

@@ -116,24 +116,18 @@ let protect = async (req,res ,next) =>{
 
 const sendEmail = (options) =>{
     const transporter = nodemailer.createTransport({
-        service: SendGrid,
-//         host: 'smtp.sendgrid.net',
-   port: 25,
-        // host: "smtp.gmail.com",
-        // port:465,
-        // secure:true,
-        // // requireTLS:true,
-        auth:{
-            // user:"classicyou112@gmail.com",
-            // pass:"classicyou112@Mayank"
-            user:"apikey",
-            pass:"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",
-        }
+        host: 'smtp.office365.com',
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+        user: 'alaynaweb@outlook.com', // sender email
+        pass: 'pp4347@viksmaya' // sender password
+    }
     });
 
     // console.log(options.to)
     const mailOptions = {
-        from : "mayankpatekar17@gmail.com",
+        from : "alaynaweb@outlook.com",
         to: options.to,
         subject: options.subject,
         html:options.text,
@@ -485,6 +479,19 @@ console.log(user)
         res.send({message:"Incufficient points"})
     }
 
+})
+
+app.get("/api/orders",protect,async (req,res)=>{
+    const user = req.user;
+    const userOrders = await Order.find({
+        userId: user._id
+    })
+
+    if(userOrders){
+        res.send({orders:userOrders})
+    }else{
+        res.send({message:"No Orders Found"})
+    }
 })
 
 /////////////////apis for product //////////////////////

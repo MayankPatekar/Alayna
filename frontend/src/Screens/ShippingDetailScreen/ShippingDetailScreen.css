@@ -28,15 +28,15 @@ body {
   margin: 0;
 }
 
-h1 {
+.ship-container h1 {
   margin-bottom: 1rem;
 }
 
-p {
+.ship-container p {
   color: var(--color-gray);
 }
 
-hr {
+.ship-container hr {
   height: 1px;
   width: 100%;
   background-color: var(--color-light-gray);
