@@ -465,6 +465,22 @@ console.log(user)
             // await user.save();
             user.points = user.points + pointRecivedToUser;
             await user.save();
+
+            cartItems.forEach(Item =>{
+                Item.Types.forEach(async IType=>{
+                    if(IType.size === Item.SelectedSize){
+                        
+                        const prod = await Product.findOne({_id:Item._id})
+                        console.log(prod)
+                        prod.Types.forEach(PType=>{
+                            if(PType.size === Item.SelectedSize){
+                                PType.quantity = PType.quantity - Item.cartQuantity
+                            }
+                        })
+                        prod.save();
+                    }
+                })
+            })
     }else{
         res.send({message:"Incufficient points"})
     }
