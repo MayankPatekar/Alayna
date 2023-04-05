@@ -20,6 +20,7 @@ import SharePointScreen from './Screens/SharePointScreen/SharePointScreen';
 import WishListScreen from './Screens/WishListScreen/WishListScreen';
 import SearchScreen from './Screens/SearchScreen/SearchScreen';
 import OrdersScreen from './Screens/OrdersScreen/OrdersScreen';
+import About from './Screens/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -29,9 +30,9 @@ function App() {
     <Routes>
       <Route path='/' exact element={<NavBar />} >
         <Route path='/' element={<HomeScreen />}/>
-        <Route path='about'  />
+        <Route path='about' element={About} />
         <Route path='search' element={<SearchScreen />} />
-        <Route path='contactus' element={<Contact />} />
+        <Route path='contact' element={<Contact />} />
         <Route path='profile' element={<ProfileScreen/>}/>
         <Route path='wishlist' element={<WishListScreen/>}/>
         <Route path='shop/:category' element={<CategoryScreen />} />

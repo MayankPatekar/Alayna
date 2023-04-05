@@ -3,12 +3,17 @@
     height: 100%;
 }
 
+html, body, #app, #app>div {
+    height: 100%;
+    position: relative;
+  }
+
 .login-container{
     margin: auto;
     text-align: center;
     align-items: center;
-    /* vertical-align:auto; */
-    /* max-width: 220px; */
+    vertical-align:auto;
+    max-width: 220px;
     width: 300px;
     position: absolute;
     top: 50%;
@@ -35,8 +40,8 @@
 }
 .login-btn{
     margin-top: 10px;
-    /* width: 100%; */
-    /* background-color: #343131; */
+    width: 100%;
+    background-color: #343131;
     background-color: #000000;
     color: white;
     padding: 10px;
