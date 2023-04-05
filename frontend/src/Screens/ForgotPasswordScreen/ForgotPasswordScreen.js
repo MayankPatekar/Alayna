@@ -73,7 +73,7 @@ export default function ForgotPasswordScreen() {
                         </h4>
                         <input type="email" value={user.Email} name="Email" onBlur={handleEmailBlur} onChange={handleChange} placeholder="E-mail" required />
                         {EE && <>{EE}</>}
-                        <div className="login-btn" onClick={forgotpass} style={{marginBottom:"10px"}}>Send Link</div>
+                        <div className="login-btn" onClick={forgotpass} style={{marginBottom:"15px"}}>Send Link</div>
                     </div>
                 </div>
             </div>

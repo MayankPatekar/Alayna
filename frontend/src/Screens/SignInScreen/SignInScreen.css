@@ -26,12 +26,12 @@ html, body, #app, #app>div {
 
 .login-container{
     margin: auto;
-    /* padding: 20px; */
+    padding: 0px 20px;
     text-align: center;
     align-items: center;
     /* vertical-align:auto; */
     /* max-width: 220px; */
-    width: 300px;
+    width: 400px;
     position: absolute;
     top: 5%;
     left: 50%;
@@ -90,4 +90,15 @@ html, body, #app, #app>div {
     margin: 0px 10px;
 }
 
+@media only screen and (max-width:1000px){
+    .sign-wrapper{
+    background-image: url(../form-bg.png);
+    }
+}
 
+@media only screen and (max-width:850px){
+    .login-container{
+        width: 300px;
+        padding: 0px 10px;
+    }   
+}
