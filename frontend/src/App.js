@@ -30,7 +30,7 @@ function App() {
     <Routes>
       <Route path='/' exact element={<NavBar />} >
         <Route path='/' element={<HomeScreen />}/>
-        <Route path='about' element={About} />
+        <Route path='about' element={<About />} />
         <Route path='search' element={<SearchScreen />} />
         <Route path='contact' element={<Contact />} />
         <Route path='profile' element={<ProfileScreen/>}/>

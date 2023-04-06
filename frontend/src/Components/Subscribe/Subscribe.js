@@ -7,6 +7,12 @@ import { toast } from "react-toastify";
 const Subscribe = () => {
 
     const [email, setEmail] = useState();
+    // validation of email
+  const [EE, setEME] = useState("");
+  const handleEmailBlur = () => {
+    const regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,}$/;
+    if (email === "") { setEME(""); } else if (regex.test(email)) { setEME(""); } else { setEME("email is invalid"); }
+  };
     const handleChange = e =>{
         setEmail(e.target.value);
       }
@@ -16,14 +22,19 @@ const Subscribe = () => {
         }
       }
       const handleSubmit = async() =>{
-        const {data} = await axios.post(`http://localhost:3001/email/${email}`,config);
-        if(data.code? data.code === 200:0){
+        if(!EE){
 
-            toast.success(`${data.message}`)
+            const {data} = await axios.post(`http://localhost:3001/email/${email}`,config);
+            if(data.code? data.code === 200:0){
+    
+                toast.success(`${data.message}`)
+            }else{
+                toast.info(`${data.message}`)
+            }
         }else{
-            toast.info(`${data.message}`)
+            toast.info("Please enter valid Email")
         }
-console.log(data)
+// console.log(data)
       }
 
     return (
@@ -40,7 +51,8 @@ console.log(data)
                 <div className="form-inside">
                 <div className="box-field_row">
                     <div className="box-field">
-                        <input type="email"value={email} onChange={handleChange} className="form-input" placeholder="Enter your email"/>
+                        <input type="email" onBlur={handleEmailBlur} value={email} onChange={handleChange} className="form-input" placeholder="Enter your email"/>
+                        {EE && <>{EE}</>}
                     </div>
                     <button type="submit" className="sub-btn" onClick={handleSubmit}>Subscribe</button>
                 </div>

@@ -40,24 +40,28 @@ const cartSlice = createSlice({
             
             if(itemIndex >=0){
                 if(state.cartItems[itemIndex].SelectedSize === action.payload.SelectedSize){
+                    if(state.cartItems[itemIndex].cartQuantity < 10){
 
-                    state.cartItems[itemIndex].cartQuantity +=1;
-                    toast.info(`increased ${state.cartItems[itemIndex].ProductName} cart quantity`,{
+                        state.cartItems[itemIndex].cartQuantity +=1;
+                    }else{
+                        toast.info("You can add only 10 quantity per product",{autoClose:800})
+                    }
+                    // toast.info(`increased ${state.cartItems[itemIndex].ProductName} cart quantity`,{
     
-                    })
+                    // })
 
                 }else{
                     const tempProduct = {...action.payload,cartQuantity:1}
                 state.cartItems.push(tempProduct);
                 toast.success(`${tempProduct.ProductName} added to cart successfully`,{
-
+                    autoClose:800
                 })
                 }
             }else{
                 const tempProduct = {...action.payload,cartQuantity:1}
                 state.cartItems.push(tempProduct);
                 toast.success(`${tempProduct.ProductName} added to cart successfully`,{
-
+                    autoClose:800
                 })
             }
 

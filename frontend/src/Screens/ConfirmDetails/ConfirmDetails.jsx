@@ -87,6 +87,10 @@ export default function ConfirmDetails() {
               </h4>
             </div>
             <h4>
+              <span>Contact Number : </span>
+              {shipinfo[0].PhoneNumber}
+            </h4>
+            <h4>
               <span>Address : </span>
               {shipinfo[0].Address}
             </h4>

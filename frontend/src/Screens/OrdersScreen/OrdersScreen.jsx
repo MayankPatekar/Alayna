@@ -41,143 +41,176 @@ export default function OrdersScreen() {
           .slice(0)
           .reverse()
           .map((order) => (
-            <div className=" container row" style={{margin: "47px 0px"}} id={order._id}>
+            <div
+              className=" container row"
+              style={{ margin: "47px 0px" }}
+              id={order._id}
+            >
+              
               <div className="col-sm-5">
                 <div className="card">
-
-                <div className="card-body">
-                  <h3>Shipping details</h3>
-                  {/* <div className="row">
+                  <div className="card-body">
+                    <h3>Shipping details</h3>
+                    {/* <div className="row">
                     <div className="col-sm-3">
                       <h6 className="mb-0">User Email :</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">{"email"}</div>
                   </div>
                   <hr /> */}
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Full Name</h6>
+                    <div className="row">
+                      <div className="col-sm-3">
+                        <h6 className="mb-0">Full Name</h6>
+                      </div>
+                      <div className="col-sm-9 text-secondary">
+                        {order.shippingDetails[0].FirstName}{" "}
+                        {order.shippingDetails[0].LastName}
+                      </div>
                     </div>
-                    <div className="col-sm-9 text-secondary">
-                      {order.shippingDetails[0].FirstName}{" "}
-                      {order.shippingDetails[0].LastName}
+                    <hr />
+                    <div className="row">
+                      <div className="col-sm-3">
+                        <h6 className="mb-0">Contact Number</h6>
+                      </div>
+                      <div className="col-sm-9 text-secondary">
+                        {order.shippingDetails[0].PhoneNumber} 
+                      </div>
                     </div>
+                    <hr />
+                    <div className="row">
+                      <div className="col-sm-3">
+                        <h6 className="mb-0">Address</h6>
+                      </div>
+                      <div className="col-sm-9 text-secondary">
+                        {order.shippingDetails[0].Address} {" ,"}
+                        {order.shippingDetails[0].City}
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="row">
+                      <div className="col-sm-3">
+                        <h6 className="mb-0">Pincode</h6>
+                      </div>
+                      <div className="col-sm-9 text-secondary">
+                        {order.shippingDetails[0].PinCode}
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="row">
+                      <div className="col-sm-3">
+                        <h6 className="mb-0">State</h6>
+                      </div>
+                      <div className="col-sm-9 text-secondary">
+                        {order.shippingDetails[0].State}
+                      </div>
+                    </div>
+                    <hr />
+                    {
+                      order.isShipped ? 
+                      <>Your Order is shipped</>
+                    : <div className="row">
+                    {order.isCanceled? <>Your Order is cancel</> :<button className="btn btn-dark" >Cancel Order</button>}
+                  </div> 
+                    }
                   </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Address</h6>
-                    </div>
-                    <div className="col-sm-9 text-secondary">
-                      {order.shippingDetails[0].Address} {" ,"}
-                      {order.shippingDetails[0].City}
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">Pincode</h6>
-                    </div>
-                    <div className="col-sm-9 text-secondary">
-                      {order.shippingDetails[0].PinCode}
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <h6 className="mb-0">State</h6>
-                    </div>
-                    <div className="col-sm-9 text-secondary">
-                      {order.shippingDetails[0].State}
-                    </div>
-                  </div>
-                  <hr />
-                </div>
                 </div>
               </div>
               <div className="col-sm-7">
                 <div className="card">
-
-                <div className="card-body">
-                  <h3>Product details</h3>
-                  <div className="row">
-                    {order.Items.map((product) => (
-                      <div
-                        className="row"
-                        key={product.price + product.SelectedSize}
-                      >
-                        <div className="col-sm">
-                          <div className="row">
-                            <img
-                              className="col-sm"
-                              src={product.Image.url}
-                              alt="product-img"
-                              style={{ height: "120px", objectFit: "contain" }}
-                            />
-                            <h4 className="col-sm" style={{ fontSize: "15px" }}>
-                              {product.ProductName} {product.SelectedSize}{" "}
-                              {product.Types[0].unit}
-                            </h4>
-                            <div className="row"></div>
+                  <div className="card-body">
+                    <h3>Product details</h3>
+                    <div className="row">
+                      {order.Items.map((product) => (
+                        <div
+                          className="row"
+                          key={product.price + product.SelectedSize}
+                        >
+                          <div className="col-sm">
+                            <div className="row">
+                              <img
+                                className="col-sm"
+                                src={product.Image.url}
+                                alt="product-img"
+                                style={{
+                                  height: "120px",
+                                  objectFit: "contain",
+                                }}
+                              />
+                              <h4
+                                className="col-sm"
+                                style={{ fontSize: "15px" }}
+                              >
+                                {product.ProductName} {product.SelectedSize}{" "}
+                                {product.Types[0].unit}
+                              </h4>
+                              <div className="row"></div>
+                            </div>
+                          </div>
+                          <div className="col-sm">
+                            <div className="row">
+                              <h4
+                                className="col-sm"
+                                style={{ textAlign: "center" }}
+                              >
+                                {product.price} * {product.cartQuantity}
+                              </h4>
+                              <h4
+                                className="col-sm"
+                                style={{ textAlign: "center" }}
+                              >
+                                <span>
+                                  = {product.price * product.cartQuantity}
+                                </span>
+                              </h4>
+                            </div>
                           </div>
                         </div>
-                        <div className="col-sm">
-                          <div className="row">
-                            <h4
-                              className="col-sm"
-                              style={{ textAlign: "center" }}
-                            >
-                              {product.price} * {product.cartQuantity}
-                            </h4>
-                            <h4
-                              className="col-sm"
-                              style={{ textAlign: "center" }}
-                            >
-                              <span>
-                                = {product.price * product.cartQuantity}
-                              </span>
-                            </h4>
-                          </div>
+                      ))}
+                      <hr />
+                      <div className="row">
+                        <div className="col-sm-9">
+                          <h6 className="mb-0">Total Items</h6>
+                        </div>
+                        <div className="col-sm-3 text-secondary">
+                          {order.TotalQuantity}
                         </div>
                       </div>
-                    ))}
-                    <hr />
-                    <div className="row">
-                      <div className="col-sm-9">
-                        <h6 className="mb-0">Total Items</h6>
+                      <div className="row">
+                        <div className="col-sm-9">
+                          <h6 className="mb-0">Total Price</h6>
+                        </div>
+                        <div className="col-sm-3 text-secondary">
+                          {order.TotalAmount}
+                        </div>
                       </div>
-                      <div className="col-sm-3 text-secondary">
-                        {order.TotalQuantity}
+                      <div className="row">
+                        <div className="col-sm-9">
+                          <h6 className="mb-0">Total Point Recived</h6>
+                        </div>
+                        <div className="col-sm-3 text-secondary">
+                          {order.TotalPointsRecived}
+                        </div>
                       </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-sm-9">
-                        <h6 className="mb-0">Total Price</h6>
+                      <div className="row">
+                        <div className="col-sm-9">
+                          <h6 className="mb-0">Total Points Applied</h6>
+                        </div>
+                        <div className="col-sm-3 text-secondary">
+                          {order.TotalPointsApply}
+                        </div>
                       </div>
-                      <div className="col-sm-3 text-secondary">
-                        {order.TotalAmount}
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-sm-9">
-                        <h6 className="mb-0">Total Point Recived</h6>
-                      </div>
-                      <div className="col-sm-3 text-secondary">
-                        {order.TotalPointsRecived}
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-sm-9">
-                        <h6 className="mb-0">Total Points Applied</h6>
-                      </div>
-                      <div className="col-sm-3 text-secondary">
-                        {order.TotalPointsApply}
-                      </div>
-                    </div>
 
-                    <hr />
-                  </div>
+                      <hr />
+                      <div className="row">
+              <div className="track">
+                <div className="step active"> <span className="icon"> <i className="fa fa-check"></i> </span> <span className="text">Order confirmed</span> </div>
+                <div className={order.isPacked ? "step active":"step"}> <span className="icon"> <i className="fa fa-user"></i> </span> <span className="text"> Picked by courier</span> </div>
+                <div className={order.isShipped ? "step active":"step"}> <span className="icon"> <i className="fa fa-truck"></i> </span> <span className="text"> On the way </span> </div>
+                <div className={order.isDelivered ? "step active":"step"}> <span className="icon"> <i className="fa fa-box"></i> </span> <span className="text">Delivered</span> </div>
+            </div>
               </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               {/* <div className="col-sm card">
