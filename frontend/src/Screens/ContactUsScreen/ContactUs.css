@@ -4,7 +4,8 @@
 }
 
 .discount{
-    margin: 15px 0px;
+    /* margin: 15px 0px; */
+    padding: 25px 0px;
     background-image: url(ContactUsBG.jpeg);
     background-size: cover;
     background-position: center;
@@ -15,6 +16,7 @@
 .discount-info{
     max-width: 400px;
     padding: 20px 40px;
+    border-radius: 20px;
     backdrop-filter: blur(10px);
     background-color: rgb(86 86 86 / 33%);
 }
@@ -61,6 +63,7 @@
     font-size: 18px;
     font-family: Lato,sans-serif;
     width: -webkit-fill-available;
+    border-radius: 10px;
 
 }
 
@@ -77,6 +80,7 @@
     display: inline-block;
     transition: all .3s linear;
     font-family: Lato;
+    border-radius: 10px;
 }
 button, input[type=button], input[type=submit] {
     cursor: pointer;

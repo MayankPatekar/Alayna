@@ -24,7 +24,7 @@ html, body, #app, #app>div {
     
 }
 
-.login-container{
+.sign-wrapper .login-container{
     margin: auto;
     padding: 0px 20px;
     text-align: center;
@@ -40,14 +40,14 @@ html, body, #app, #app>div {
     backdrop-filter: blur(10px);
     background-color: rgb(86 86 86/33%);
 }
-.login-container img{
+.sign-wrapper .login-container img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 300px;
 }
 
-.login-container input{
+.sign-wrapper .login-container input{
     box-sizing: border-box;
     margin-top: 10px;
     padding: 10px;
@@ -58,7 +58,7 @@ html, body, #app, #app>div {
     color: black;
 
 }
-.login-btn{
+.sign-wrapper .login-btn{
     margin-top: 10px;
     /* width: 100%; */
     /* background-color: #343131; */
@@ -71,7 +71,7 @@ html, body, #app, #app>div {
 
 
 
-.login-lst-msg {
+.sign-wrapper .login-lst-msg {
     font-family: '',cursive;
     font-size: 1.2rem;
     /* margin-top: 10px; */
@@ -79,25 +79,25 @@ html, body, #app, #app>div {
     text-align: left;
     color: rgb(246,160,29);
 }
-.login-lst-msg > a{
+.sign-wrapper .login-lst-msg > a{
     margin: 5px;
     color:rgb(217,131,35);
 }
 
-.back-container{
+.sign-wrapper .back-container{
     font-family: '',cursive;
     font-size: 1.2rem;
     margin: 0px 10px;
 }
 
 @media only screen and (max-width:1000px){
-    .sign-wrapper{
+    .sign-wrapper .sign-wrapper{
     background-image: url(../form-bg.png);
     }
 }
 
 @media only screen and (max-width:850px){
-    .login-container{
+    .sign-wrapper .login-container{
         width: 300px;
         padding: 0px 10px;
     }   

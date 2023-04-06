@@ -7,7 +7,7 @@ export default function HeroSection(){
     return(
         <div>
             
-            <Carousel showStatus={false} showThumbs={false} autoPlay axis="horizontal" interval="5000" transitionTime="2000" infiniteLoop>
+            <Carousel showStatus={false} showThumbs={false} autoPlay axis="horizontal" interval="5000" transitionTime="1500" infiniteLoop>
                 <div>
                     <img src="./images/S1.png" alt="hero-img" />
                     {/* <p className="legend">Legend 1</p> */}

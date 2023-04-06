@@ -62,7 +62,7 @@ export default function ForgotPasswordScreen() {
 
 
     return (
-        <div className="forgot-wrapper">
+        <div className="sign-wrapper">
             <div className="login-container">
                 <div className="center-con">
                     <img src="/logo/logo1.png" alt="logo" />

@@ -31,7 +31,7 @@ export default function BestSeller(){
         <>
         
         <div id="wrap">
-            <SectionHead title="New brand launched"/>
+            <SectionHead className="Brand-launched" title="New brand Launched"/>
             <div id="columns" className="columns_4">
                 {
                     products?.slice(0,8).map((product)=>(

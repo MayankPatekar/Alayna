@@ -1,0 +1,17 @@
+.search-container{
+    margin-top: 15px;
+}
+
+.serach-txtbox{
+    font-size: 1.5  rem;
+    font-family: 'Edu NSW ACT',cursive;
+}
+
+.btn-outline-dark{
+    padding: 5px 15px;
+    margin-left: 8px;
+    background: black;
+    color: rgb(244,181,43);
+    font-family: 'Amatic Sc',cursive;
+    font-size: 1.8rem;
+}

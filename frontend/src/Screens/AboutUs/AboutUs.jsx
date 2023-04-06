@@ -15,9 +15,9 @@ export default function AboutUs() {
 
       <h2 style={{ textAlign: "center" ,fontFamily:"Amatic SC",fontSize:"60px",fontWeight:"700"}}>Our Team</h2>
       {/* <div className="wrap-card"> */}
-        <div className="row">
-          <div className="column">
-            <div className="card">
+        <div className="about-row">
+          <div className="about-column">
+            <div className="about-card">
               <img src={viks} alt="Vikankshi" style={{ width: "100%" }} />
               <div className="container-about">
                 <h2 className="name-about-direct">Vikankshi Patil</h2>
@@ -29,12 +29,12 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="column">
-            <div className="card">
+          <div className="about-column">
+            <div className="about-card">
               <img src={maya} alt="Mayank" style={{ width: "100%", }} />
               <div className="container-about">
                 <h2 className="name-about-direct">Mayank Patekar</h2>
-                <p className="title">Project Director</p>
+                <p className="title" style={{alignContent:"center"}}>Project Director</p>
                 <p className="title">Skilled and Dedicated Person.</p>
                 <p className="title">maya@example.com</p>
                 <p><button className="about-btn">Contact</button></p>

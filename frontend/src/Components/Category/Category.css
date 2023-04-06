@@ -6,12 +6,21 @@ a:hover {
   text-decoration: none;
 } */
 .grey-background h3 {
-  border: 2px solid #eee;
+  /* border: 2px solid #eee; */
+  background-color: black;
+  color: rgb(244,181,43);
   padding: 10px 15px;
   display: inline-block;
-  font-size: 18px;
-  color: #fff;
+  font-family: 'Amatic SC',cursive;
+  font-size: 26px;
+  /* color: #fff; */
 }
+
+.grey-background p{
+  font-family: 'Alkatra',cursive;
+  font-size: 20px;
+}
+
 .grey-background {
   padding: 40px 0;
   background: radial-gradient(
