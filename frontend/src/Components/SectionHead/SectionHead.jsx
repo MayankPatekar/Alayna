@@ -3,7 +3,7 @@ import "./SectionHead.css";
 export default function SectionHead({title}){
 return(
     <>
-    <h2>{title}</h2>
+    <h2 className="section-heading">{title}</h2>
     </>
 )
 }

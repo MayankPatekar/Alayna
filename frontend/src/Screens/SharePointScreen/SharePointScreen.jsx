@@ -95,9 +95,8 @@ export default function SharePointScreen() {
         <button
           style={{margin: "10px 0px" }}
           className="btn btn-dark btn-lg btn-block share-btn"
-          onClick={handlePay}
-        >
-          Pay Now
+          onClick={handlePay}>
+          Share
         </button>
       </div>
       </div>

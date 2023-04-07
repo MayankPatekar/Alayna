@@ -1,5 +1,12 @@
 
-h2{
-
+.section-heading{
+    font-family: 'Amatic SC',cursive;
+    font-size: 50px;
     text-align: left;
+}
+
+@media only screen and (max-width:600px){
+    .section-heading{
+        font-size: 40px;
+    }
 }

@@ -7,7 +7,6 @@ import { toast } from "react-toastify";
 // import logo from "../../images/logo/Logo.png";
 
 
-
 export default function SignInScreen() {
 
   const navigate = useNavigate({});
@@ -72,7 +71,7 @@ export default function SignInScreen() {
             {EE && <>{EE}</>}
             <input type="password" name="Password" value={user.Password} onBlur={handlePasswordBlur} onChange={handleChange} placeholder="Password" />
             {PE && <>{PE}</>}
-            <div style={{ textAlign: "left", padding: "5px 15px" }}><a href="/forgotpassword" style={{ color: "rgb(217,131,35)" }}>Forget password ? </a></div>
+            <div style={{ textAlign: "left", padding: "5px 15px" }}><a href="/forgotpassword" style={{ color: "rgb(217,131,35)" }}>Forget password? </a></div>
             <div className="login-btn" onClick={signIn}>Sign in</div>
           </div>
           <div className="login-lst-msg" >New User?    <a href="/signup">Sign up</a></div>
