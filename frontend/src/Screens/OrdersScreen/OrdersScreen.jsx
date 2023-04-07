@@ -122,12 +122,19 @@ export default function OrdersScreen() {
                     </div>
                     <hr />
                     {
-                      order.isShipped ? 
+                      order.isDelivered ? <>Order delivered successfully </> : order.isShipped ? 
                       <>Your Order is shipped</>
                     : <div className="row">
                     {order.isCanceled? <>Your Order is cancel</> :<button className="btn btn-dark" onClick={()=>{handleCancelOrder(order)}}>Cancel Order</button>}
                   </div> 
                     }
+                    {/* {
+                      order.isShipped ? 
+                      <>Your Order is shipped</>
+                    : <div className="row">
+                    {order.isCanceled? <>Your Order is cancel</> :<button className="btn btn-dark" onClick={()=>{handleCancelOrder(order)}}>Cancel Order</button>}
+                  </div> 
+                    } */}
                   </div>
                 </div>
               </div>
