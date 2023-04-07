@@ -14,7 +14,7 @@ export default function SignUpScreen() {
   const [EE, setEME] = useState("");
   const handleEmailBlur = () => {
     const regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,}$/;
-    if (user.Email === "") { setEME(""); } else if (regex.test(user.Email)) { setEME(""); } else { setEME("email is invalid"); }
+    if (user.Email === "") { setEME(""); } else if (regex.test(user.Email)) { setEME(""); } else { setEME("Email is invalid"); }
   };
   // validation of phone number
   const [PhE, setPhE] = useState("");

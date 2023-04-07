@@ -51,7 +51,7 @@ export default function OrdersScreen() {
 
   return (
     <div className="container">
-      <h4>Your Orders</h4>
+      <h4 className="section-heading">Your Orders</h4>
       {orders &&
         orders
           .slice(0)

@@ -20,6 +20,7 @@ html, body, #app, #app>div {
     background-size: cover;
     background-position: center;
     text-align: -webkit-center;
+    color: rgb(246,160,29);
     /* border-radius: 20px; */
     
 }
@@ -77,7 +78,6 @@ html, body, #app, #app>div {
     /* margin-top: 10px; */
     margin: 15px 12px;
     text-align: left;
-    color: rgb(246,160,29);
 }
 .sign-wrapper .login-lst-msg > a{
     margin: 5px;
