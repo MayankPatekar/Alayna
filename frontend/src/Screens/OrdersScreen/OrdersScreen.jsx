@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./OrdersScreen.css";
 import axios from "axios";
+import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 export default function OrdersScreen() {
@@ -33,6 +34,21 @@ export default function OrdersScreen() {
     }
     FetchOrders();
   }, [navigate]);
+
+  const handleCancelOrder = async (order) =>{
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Classic ${localStorage.getItem("authToken")}`,
+      },
+    };
+    if(!order.isShipped){
+      const id = order._id;
+      const {data} = await axios.post("/cancelorder",{id},config);
+      toast(`${data.message}`)
+    } 
+  }
+
   return (
     <div className="container">
       <h4>Your Orders</h4>
@@ -109,7 +125,7 @@ export default function OrdersScreen() {
                       order.isShipped ? 
                       <>Your Order is shipped</>
                     : <div className="row">
-                    {order.isCanceled? <>Your Order is cancel</> :<button className="btn btn-dark" >Cancel Order</button>}
+                    {order.isCanceled? <>Your Order is cancel</> :<button className="btn btn-dark" onClick={()=>{handleCancelOrder(order)}}>Cancel Order</button>}
                   </div> 
                     }
                   </div>

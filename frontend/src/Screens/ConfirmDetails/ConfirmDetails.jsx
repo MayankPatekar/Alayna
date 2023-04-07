@@ -178,9 +178,12 @@ export default function ConfirmDetails() {
                 <span>Rs. {cart.cartTotalAmount - applyPoints} /-</span>
               </h4>
             </div>
+            <div className="row">
             <button className="btn btn-dark btn-lg btn-block" onClick={handlePlaceOrder}>
               Placed Order
             </button>
+
+            </div>
           </>
         ) : (
           <></>

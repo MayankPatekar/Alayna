@@ -462,9 +462,9 @@ console.log(user)
             }
         }) 
             user.points = user.points - applyPoints;
-            // await user.save();
-            user.points = user.points + pointRecivedToUser;
             await user.save();
+            // user.points = user.points + pointRecivedToUser;
+            // await user.save();
 
             cartItems.forEach(Item =>{
                 Item.Types.forEach(async IType=>{
@@ -484,6 +484,38 @@ console.log(user)
     }else{
         res.send({message:"Incufficient points"})
     }
+
+})
+
+app.post("/cancelorder",protect,async(req,res)=>{
+    try{
+
+        const id = req.body.id
+        const user = req.user
+        const order  = await Order.findOne({_id:id})
+        order.isCanceled = true;
+        await order.save()
+    user.points = user.points + order.TotalPointsApply
+    await user.save()
+    
+    order.Items.forEach(async Item =>{
+        const product = await Product.findOne({_id:Item._id})
+
+        product.Types.forEach(type=>{
+            if(type.size === Item.SelectedSize){
+                type.quantity = type.quantity + Item.cartQuantity
+            }
+        })
+        await product.save();
+    })
+    
+    res.status(200).send({message:"Order cancel successfully"})
+}catch(err){
+    res.send({message:"error occure"})
+}
+    
+
+
 
 })
 
