@@ -101,7 +101,7 @@ export default function ProfileScreen(){
                       <h6 className="mb-0">First Name</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
-                        {isUpdate ? <input type="text" value={fname} onChange={(event)=>setFname(event.target.value)} />:(profile? <>{profile.fname}{" "}</>:<></>)}
+                        {isUpdate ? <input type="text"placeholder={profile.fname} value={fname} onChange={(event)=>setFname(event.target.value)} />:(profile? <>{profile.fname}{" "}</>:<></>)}
                     </div>
                   </div>
                   <hr/>
@@ -110,7 +110,7 @@ export default function ProfileScreen(){
                       <h6 className="mb-0">Last Name</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
-                        {isUpdate ? <input type="text" value={lname} onChange={(event)=>setLname(event.target.value)} />:(profile? <>{profile.lname}</>:<></>)}
+                        {isUpdate ? <input type="text" placeholder={profile.lname} value={lname} onChange={(event)=>setLname(event.target.value)} />:(profile? <>{profile.lname}</>:<></>)}
                     </div>
                   </div>
                   <hr/>
@@ -119,7 +119,7 @@ export default function ProfileScreen(){
                       <h6 className="mb-0">Email</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
-                        {isUpdate ?<input type="text" value={email} onChange={(event)=>setEmail(event.target.value)} />:(profile ? <>{profile.email}</>:<></>) }
+                        {isUpdate ?<input type="text" placeholder={profile.email} value={email} onChange={(event)=>setEmail(event.target.value)} />:(profile ? <>{profile.email}</>:<></>) }
                     
                     </div>
                   </div>
@@ -129,7 +129,7 @@ export default function ProfileScreen(){
                       <h6 className="mb-0">Mobile</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
-                    {isUpdate ?<input type="text" value={phone} onChange={(event)=>setPhone(event.target.value)} />:(profile ? <>{profile.phone}</>:<></>) }
+                    {isUpdate ?<input type="text" placeholder={profile.phone} value={phone} onChange={(event)=>setPhone(event.target.value)} />:(profile ? <>{profile.phone}</>:<></>) }
                       
                     </div>
                   </div>
