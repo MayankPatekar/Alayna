@@ -118,4 +118,10 @@
      width: 100%;
      display: block;
    }
+   .wrapper-about .about-row{
+    flex-direction: column;
+   }
+   .wrapper-about .about-column{
+    width: 100%;
+   }
  }
