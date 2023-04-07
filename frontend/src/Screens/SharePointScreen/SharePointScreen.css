@@ -1,9 +1,39 @@
+.share-wrapper{
+    /* background-color: #000000; */
+    height: 100%;
+    /* margin: 0px; */
+    background-image: url(../form-bg1.png);
+    background-size: cover;
+    background-position: center;
+    text-align: -webkit-center;
+    border-radius: 20px;
+    
+}
+
+
 .shar-container {
-    max-width: 40rem;
+  color:rgb(246,160,29);
+    /* max-width: 40rem;
   padding: 10vw 2rem 0;
   margin: 0 auto;
   height: 100vh;
+  text-align: center; */
+  max-width: 40rem;
+  margin: auto;
+  padding: 2rem ;
+  /* height: 100vh; */
   text-align: center;
+  align-items: center;
+  /* vertical-align:auto; */
+  /* max-width: 220px; */
+  /* width: 400px; */
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  border-radius: 20px;
+  transform: translate(-50%, 0%);
+  backdrop-filter: blur(10px);
+  background-color: rgb(86 86 86/33%);
 
 }
 .shar-container > *{
@@ -11,8 +41,12 @@
     margin: 11px;
 }
 .shar-container img{
-width: 100px;
+/* width: 100px; */
 justify-content: center;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 200px;
 }
 
 

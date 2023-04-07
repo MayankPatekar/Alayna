@@ -71,7 +71,8 @@
     border-top: 1px solid rgba(0,0,0,0.05);
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 23
+    px;
     font-weight: 900;
 }
 
@@ -99,4 +100,10 @@
 }
 .action .menu ul li:hover a{
     color: #ffbd2e;
+}
+
+.btn-light{
+    background-color: #ffbd2e;
+    color: black;
+    font-size: 18px;
 }

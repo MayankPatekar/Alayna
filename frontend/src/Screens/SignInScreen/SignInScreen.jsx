@@ -15,7 +15,7 @@ export default function SignInScreen() {
   const [EE, setEME] = useState("");
   const handleEmailBlur = () => {
     const regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,}$/;
-    if (user.Email === "") { setEME(""); } else if (regex.test(user.Email)) { setEME(""); } else { setEME("email is invalid"); }
+    if (user.Email === "") { setEME(""); } else if (regex.test(user.Email)) { setEME(""); } else { setEME("Email is invalid"); }
   };
   // validation of password 
   const [PE, setPE] = useState("");
@@ -52,7 +52,7 @@ export default function SignInScreen() {
       const { data } = await axios.post("http://localhost:3001/signin", user, config);
       localStorage.setItem("authToken", data.token);
       navigate("/")
-      toast.success(`Wellcome , You are Sign in`, { autoClose: 2000 })
+      toast.success(`Welcome , Happy shopping`, { autoClose: 2000 })
     } catch (error) {
       alert(error.response.data.message);
     }

@@ -86,7 +86,7 @@ export default function ProfileScreen(){
                       {/* <p class="text-secondary mb-1">Full Stack Developer</p>
                       <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p> */}
                       {/* <button class="btn btn-primary">Follow</button> */}
-                      <button className="btn btn-dark btn-lg btn-block " onClick={()=>{navigate("/sharepoints")}}>Share Points</button>
+                      <button className="btn btn-dark btn-lg btn-block profile-btn" onClick={()=>{navigate("/sharepoints")}}>Share Points</button>
                     </div>
                   </div>
                 </div>
@@ -145,9 +145,9 @@ export default function ProfileScreen(){
                   {/* <hr/> */}
                   <div className="row">
                     <div className="col-sm-12">
-                        {isUpdate ?(<><button className="btn btn-dark btn-lg btn-block"onClick={handleUpdate} >Update</button>
-                    <button className="btn btn-outline-dark btn-lg btn-block " onClick={()=>{setIsUpdate(false)}}>Cancel</button></>)
-                    :(<button className="btn btn-dark btn-lg btn-block "onClick={()=>{setIsUpdate(true)}}>Edit Profile</button>)}
+                        {isUpdate ?(<><button className="btn btn-dark btn-lg btn-block profile-btn" onClick={handleUpdate} >Update</button>
+                    <button className="btn btn-outline-dark btn-lg btn-block profile-btn" onClick={()=>{setIsUpdate(false)}}>Cancel</button></>)
+                    :(<button className="btn btn-dark btn-lg btn-block profile-btn"onClick={()=>{setIsUpdate(true)}}>Edit Profile</button>)}
                     
 
                     
@@ -158,11 +158,6 @@ export default function ProfileScreen(){
                   </div>
                 </div>
               </div>
-
-              
-
-
-
             </div>
           </div>
         </div>

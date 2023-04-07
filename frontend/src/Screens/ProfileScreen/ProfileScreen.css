@@ -111,3 +111,13 @@ textarea{
 .shadow-none {
     box-shadow: none!important;
 }
+
+.profile-btn{
+    padding: 5px 15px;
+    margin-left: 8px;
+    background: black;
+    color: rgb(244,181,43);
+    font-family: 'Amatic Sc',cursive;
+    font-size: 1.8rem;
+    
+}

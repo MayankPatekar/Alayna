@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import img1 from "./6.png";
 import "./SharePointScreen.css";
+// import "../SignInScreen/SignInScreen.css"
 
 export default function SharePointScreen() {
     const navigate = useNavigate()
@@ -57,6 +58,7 @@ export default function SharePointScreen() {
 
   return (
     <>
+    <div className="share-wrapper">
       <div className="shar-container">
         <img style={{ textAlign: "center" }} src={img1} alt="img" />
         <h2>Share Points</h2>
@@ -95,6 +97,7 @@ export default function SharePointScreen() {
         >
           Pay Now
         </button>
+      </div>
       </div>
     </>
   );

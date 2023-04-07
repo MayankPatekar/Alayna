@@ -17,7 +17,7 @@ export default function ProfileBox({setIsUser}){
   const logout =()=>{
     localStorage.removeItem("authToken")
     setIsUser(false);
-    toast.info(`You'r Sign out ,Come back soon !`,{
+    toast.info(`You're Sign out ,Come back soon!`,{
 
     })
     navigate("/");
@@ -30,7 +30,7 @@ export default function ProfileBox({setIsUser}){
     // const history = useNavigate({});
     return(
         <div className="action">
-            <div className="pro" onClick={ToggleActive}>
+            <div className="pro" onMouseEnter={ToggleActive} >
                 <img src={userimg} alt=""/>     
             </div>
             {/* {console.log(isActive)} */}
