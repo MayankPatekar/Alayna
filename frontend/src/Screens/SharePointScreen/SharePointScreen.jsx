@@ -61,38 +61,40 @@ export default function SharePointScreen() {
     <div className="share-wrapper">
       <div className="shar-container">
         <img style={{ textAlign: "center" }} src={img1} alt="img" />
-        <h2>Share Points</h2>
-        <div className="">
-          Points You have :
+        <h1 style={{fontSize:"40px"}}>Share Points</h1>
+        <div className="" style={{fontSize:"22px"}}>
+          Points You have:
             {points? <>{points}</>:<></>}
         </div>
         <div className="row" style={{textAlign: "initial"}}>
           <div className="col">
-            <h4>Enter E-Mail of recipent</h4>
+            {/* <h4>Enter E-Mail of recipent</h4> */}
             <input
               type="email"
               value={data.Email}
               onChange={handleChange}
               required
               name="Email"
-              style={{width: "100%"}}
+              // style={{width: "100%"}}
+              placeholder="Recipient's Email"
             />
           </div>
           <div className="col">
-            <h4>Enter Amount :</h4>
+            {/* <h4>Enter Points:</h4> */}
             <input
+              placeholder="Points to be shared"
               type="number"
               value={data.Amount}
               onChange={handleChange}
               name="Amount"
-              style={{width: "100%"}}
+              // style={{width: "100%"}}
             />
           </div>
         </div>
 
         <button
-          style={{ width: "100%", margin: "20px 10px" }}
-          className="btn btn-dark btn-lg btn-block"
+          style={{margin: "10px 0px" }}
+          className="btn btn-dark btn-lg btn-block share-btn"
           onClick={handlePay}
         >
           Pay Now
