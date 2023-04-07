@@ -90,6 +90,21 @@
     padding: 5px 12px;
     cursor: pointer;
 }
+
+.product-btn{
+    padding: 5px 15px;
+    background: black;
+    color: rgb(244,181,43);
+    font-family: 'Edu NSW ACT',cursive;
+    font-size: 1.8rem;
+    margin: 2px 0px;
+}
+
+.product-btn-wish{
+    background: rgb(244,181,43);
+    color: black;
+}
+
 @media only screen and (max-width: 1020px){
     .col-sm-12{
         padding-top: 0;

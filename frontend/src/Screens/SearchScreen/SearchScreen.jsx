@@ -65,7 +65,7 @@ const [currentPage, setCurrentPage] = useState(1);
         <div className="search-container">
         <div className="container form-group">
           <input type="text" className="serach-txtbox" value={searchQuery} onChange={handleSearchQueryChange} />
-          <button className="btn btn-outline-dark" onClick={handleSearchSubmit}>Search</button>
+          <button className="btn btn-outline-dark search-button" onClick={handleSearchSubmit}>Search</button>
         </div>
         <div id="wrap">
         <div id="columns" className="columns_4">
