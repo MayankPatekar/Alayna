@@ -43,15 +43,23 @@ export default function SharePointScreen() {
   })
   const handlePay = async () => {
     try {
-     await axios.put(
-        "http://localhost:3001/api/points/share",data,
-        config
-      );
-      toast("Points share Successfully")
-      navigate("/sharepoints")
-      // console.log(message);
+      if(data.Amount >0){
+
+        const mes = await axios.put(
+          "http://localhost:3001/api/points/share",data,
+          config
+          );
+          
+          toast(`${mes.data.message}`)
+          navigate("/sharepoints")
+          console.log(mes);
+        }else{
+          toast("Enter amount")
+        }
     } catch (error) {
       console.log(error)
+      toast(`Invalid email`)
+
     }
     // console.log(data);
   };
