@@ -58,7 +58,7 @@ export default function SharePointScreen() {
         }
     } catch (error) {
       console.log(error)
-      toast(`Invalid email`)
+      toast(`Email not found`)
 
     }
     // console.log(data);
