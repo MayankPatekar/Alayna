@@ -46,9 +46,10 @@ body {
 
 .ship-container {
   max-width: 40rem;
-  padding: 10vw 2rem 0;
+  padding: 8vw 2rem 0;
   margin: 0 auto;
   height: 100vh;
+  color: #000;
 }
 
 .form {
@@ -66,7 +67,7 @@ body {
 }
 
 .field__label {
-  color: var(--color-gray);
+  color: #000;
   font-size: 0.6rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -101,19 +102,19 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.button {
+.button-shipping {
+  color: rgb(244,181,43);
   background-color: #000;
   text-transform: uppercase;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  /* font-weight: 600; */
   display: block;
-  color: #fff;
   width: 100%;
   padding: 1rem;
-  border-radius: 0.25rem;
   border: 0;
   cursor: pointer;
   outline: 0;
+  font-family: cursive;
 }
 .button:focus-visible {
   background-color: #333;

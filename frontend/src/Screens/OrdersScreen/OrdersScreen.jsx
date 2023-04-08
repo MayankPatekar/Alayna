@@ -125,7 +125,7 @@ export default function OrdersScreen() {
                       order.isDelivered ? <>Order delivered successfully </> : order.isShipped ? 
                       <>Your Order is shipped</>
                     : <div className="row">
-                    {order.isCanceled? <>Your Order is cancel</> :<button className="btn btn-dark" onClick={()=>{handleCancelOrder(order)}}>Cancel Order</button>}
+                    {order.isCanceled? <>Your Order is cancelled</> :<button className="btn btn-dark product-btn product-btn-wish" onClick={()=>{handleCancelOrder(order)}}>Cancel Order</button>}
                   </div> 
                     }
                     {/* {
@@ -227,7 +227,7 @@ export default function OrdersScreen() {
                       <div className="row">
               <div className="track">
                 <div className="step active"> <span className="icon"> <i className="fa fa-check"></i> </span> <span className="text">Order confirmed</span> </div>
-                <div className={order.isPacked ? "step active":"step"}> <span className="icon"> <i className="fa fa-user"></i> </span> <span className="text"> Picked by courier</span> </div>
+                <div className={order.isPacked ? "step active":"step"}> <span className="icon"> <i className="fa fa-user"></i> </span> <span className="text">Packed</span> </div>
                 <div className={order.isShipped ? "step active":"step"}> <span className="icon"> <i className="fa fa-truck"></i> </span> <span className="text"> On the way </span> </div>
                 <div className={order.isDelivered ? "step active":"step"}> <span className="icon"> <i className="fa fa-box"></i> </span> <span className="text">Delivered</span> </div>
             </div>

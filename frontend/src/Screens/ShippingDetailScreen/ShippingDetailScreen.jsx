@@ -88,8 +88,8 @@ export default function ShippingDetailScreen(){
       }
     return(<>
     <div className="ship-container">
-  <h1>Shipping</h1>
-  <p>Please enter your shipping details.</p>
+  <h1 style={{fontFamily:'Edu NSW ACT'}}>Shipping</h1>
+  <p>Please Enter your Shipping Details.</p>
   <hr />
   <div className="form">
     
@@ -107,7 +107,7 @@ export default function ShippingDetailScreen(){
   </div>
   <label className="field">
       <span className="field__label" for="lastname">Contact Number</span>
-      <input className="field__input" onBlur={handlePhoneBlur} value={shippingInfo.PhoneNumber} name="PhoneNumber" onChange={handleChange} type="number" id="lastname" />
+      <input className="field__input" onBlur={handlePhoneBlur} value={shippingInfo.PhoneNumber} name="PhoneNumber" onChange={handleChange} type="text" id="lastname" />
     {PhE? <>{PhE}</>:<></>}
     </label>
   <label className="field">
@@ -142,7 +142,7 @@ export default function ShippingDetailScreen(){
   </div>
   </div>
   <hr/>
-  <button className="button" onClick={handleClick}>Continue</button>
+  <button className="button-shipping" onClick={handleClick}>Continue</button>
 </div>
     </>)
 }

@@ -109,7 +109,7 @@ export default function CartScreen() {
                   <span>Points Receiving</span>
                   <span className="amount">Rs. {cart.cartTotalPoints} /-</span>
                 </div>
-                <p>taxes added *</p>
+                <p>GST included*</p>
                 <button className="btn btn-dark btn-lg product-btn product-btn-wish" onClick={()=>{navigate("/shippingdetails")}}>Check out</button>
                 <div className="continue-shopping">
                   <Link to="/">

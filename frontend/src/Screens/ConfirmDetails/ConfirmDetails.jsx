@@ -161,7 +161,7 @@ export default function ConfirmDetails() {
                       value={points}
                       onChange={handleChange}
                     />
-                    <button className="btn btn-dark" onClick={handleApply}>
+                    <button className="btn btn-dark product-btn" style={{fontSize:'11px'}} onClick={handleApply}>
                       Apply
                     </button>
                   </>
@@ -179,8 +179,8 @@ export default function ConfirmDetails() {
               </h4>
             </div>
             <div className="row">
-            <button className="btn btn-dark btn-lg btn-block" onClick={handlePlaceOrder}>
-              Placed Order
+            <button className="btn btn-dark btn-lg btn-block product-btn product-btn-wish" onClick={handlePlaceOrder}>
+              Place Order
             </button>
 
             </div>

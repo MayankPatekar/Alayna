@@ -4,10 +4,8 @@ import './ContactUs.css';
 
 export default function Contact() {
     return (
-        <div class="discount">
-            {/* <div className="wrappper-contact"> */}
+        <div class="discount-contact">
             <div class="discount-info" >
-                {/* <div className="Contact-form-back"> */}
                 <span class="saint-text">Write To Us</span>
                 <span class="main-text">Leave A Message</span>
                 <p className="contact-para">Write to us if you have any questions, we will definitely contact you and find a solution.</p>

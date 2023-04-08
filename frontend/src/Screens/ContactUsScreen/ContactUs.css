@@ -3,9 +3,9 @@
     margin: 0;
 }
 
-.discount{
+.discount-contact{
     /* margin: 15px 0px; */
-    padding: 25px 0px;
+    padding: 30px 0px;
     background-image: url(ContactUsBG.jpeg);
     background-size: cover;
     background-position: center;
@@ -14,9 +14,9 @@
 
 
 .discount-info{
-    max-width: 400px;
+    max-width: 500px;
     padding: 20px 40px;
-    border-radius: 20px;
+    border-radius: 10px;
     backdrop-filter: blur(10px);
     background-color: rgb(86 86 86 / 33%);
 }
@@ -39,7 +39,7 @@
     font-family: Tenor Sans;
     font-weight: 500;
     color: rgb(249, 99, 17);
-    font-size: 90px;
+    font-size: 80px;
     margin-bottom: 30px;
     margin-top: 4px;
 }
@@ -63,7 +63,7 @@
     font-size: 18px;
     font-family: Lato,sans-serif;
     width: -webkit-fill-available;
-    border-radius: 10px;
+    border-radius: 5px;
 
 }
 
@@ -80,7 +80,7 @@
     display: inline-block;
     transition: all .3s linear;
     font-family: Lato;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 button, input[type=button], input[type=submit] {
     cursor: pointer;
