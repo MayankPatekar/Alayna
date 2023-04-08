@@ -224,6 +224,9 @@ export default function OrdersScreen() {
                       </div>
 
                       <hr />
+                      {
+                        order.isCanceled ?<></>:(
+
                       <div className="row">
               <div className="track">
                 <div className="step active"> <span className="icon"> <i className="fa fa-check"></i> </span> <span className="text">Order confirmed</span> </div>
@@ -232,6 +235,9 @@ export default function OrdersScreen() {
                 <div className={order.isDelivered ? "step active":"step"}> <span className="icon"> <i className="fa fa-box"></i> </span> <span className="text">Delivered</span> </div>
             </div>
               </div>
+                        )
+                      }
+
                     </div>
                   </div>
                 </div>
