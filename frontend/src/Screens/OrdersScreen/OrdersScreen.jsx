@@ -125,7 +125,7 @@ export default function OrdersScreen() {
                       order.isDelivered ? <>Order delivered successfully </> : order.isShipped ? 
                       <>Your Order is shipped</>
                     : <div className="row">
-                    {order.isCanceled? <>Your Order is cancelled</> :<button className="btn btn-dark product-btn product-btn-wish" onClick={()=>{handleCancelOrder(order)}}>Cancel Order</button>}
+                    {order.isCanceled? <>Your Order is cancelled</> :<button className="btn btn-dark product-btn product-btn-wish" style={{fontSize:"1.5rem"}} onClick={()=>{handleCancelOrder(order)}}>Cancel Order</button>}
                   </div> 
                     }
                     {/* {

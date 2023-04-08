@@ -20,7 +20,7 @@ export default function SignInScreen() {
   const [PE, setPE] = useState("");
   const handlePasswordBlur = () => {
     const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/;
-    if (user.Password === "") { setPE(""); } else if (regex.test(user.Password)) { setPE(""); } else { setPE("Password must have one letter and one number and at least 8 character long"); }
+    if (user.Password === "") { setPE(""); } else if (regex.test(user.Password)) { setPE(""); } else { setPE("Password must have one letter, one number and at least 8 character long"); }
   };
 
   const [user, setUser] = useState({
@@ -71,7 +71,7 @@ export default function SignInScreen() {
             {EE && <>{EE}</>}
             <input type="password" name="Password" value={user.Password} onBlur={handlePasswordBlur} onChange={handleChange} placeholder="Password" />
             {PE && <>{PE}</>}
-            <div style={{ textAlign: "left", padding: "5px 15px" }}><a href="/forgotpassword" style={{ color: "rgb(217,131,35)" }}>Forget password? </a></div>
+            <div style={{ textAlign: "left", padding: "5px 15px" }}><a href="/forgotpassword" style={{ color: "rgb(217,131,35)" }}>Forgot password? </a></div>
             <div className="login-btn" onClick={signIn}>Sign in</div>
           </div>
           <div className="login-lst-msg" >New User?    <a href="/signup">Sign up</a></div>

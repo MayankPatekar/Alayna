@@ -26,18 +26,18 @@ export default function SignUpScreen() {
   const [FNE, setFNE] = useState("")
   const handleFNameBlur = () => {
     const regex = /^[A-Za-z]+$/;
-    if (user.FName === "") { setFNE(""); } else if (regex.test(user.FName)) { setFNE(""); } else { setFNE("No charcter allow other than alphabets"); }
+    if (user.FName === "") { setFNE(""); } else if (regex.test(user.FName)) { setFNE(""); } else { setFNE("Name must contain only letters"); }
   };
   const [LNE, setLNE] = useState("")
   const handleLNameBlur = () => {
     const regex = /^[A-Za-z]+$/;
-    if (user.LName === "") { setLNE(""); } else if (regex.test(user.LName)) { setLNE(""); } else { setLNE("No charcter allow other than alphabets"); }
+    if (user.LName === "") { setLNE(""); } else if (regex.test(user.LName)) { setLNE(""); } else { setLNE("Last name must contain only letters"); }
   };
   // validation of password 
   const [PE, setPE] = useState("");
   const handlePasswordBlur = () => {
     const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/;
-    if (user.Password === "") { setPE(""); } else if (regex.test(user.Password)) { setPE(""); } else { setPE("Password must have one letter and one number and at least 8 character long"); }
+    if (user.Password === "") { setPE(""); } else if (regex.test(user.Password)) { setPE(""); } else { setPE("Password must have one letter, one number and at least 8 character long"); }
   };
 
 
@@ -95,7 +95,7 @@ export default function SignUpScreen() {
           // .then(res=>console.log(res))
           // .catch(err=>console.log(err));
         } else {
-          toast.error("wrong password");
+          toast.error("Password doesn't match");
         }
       } else {
         toast.error("Fill complete form");
@@ -136,7 +136,7 @@ export default function SignUpScreen() {
           />
           {LNE && <>{LNE}</>}
           <input
-            type="number"
+            type="text"
             value={user.Phone}
             name="Phone"
             onChange={handleChange}
