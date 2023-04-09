@@ -83,9 +83,14 @@ export default function SignUpScreen() {
               config
             );
             // console.log(data);
-            localStorage.setItem("authToken", data.token);
-            navigate("/");
-            toast.success("Register Successfully");
+            if(!data.token===undefined){
+
+              localStorage.setItem("authToken", data.token);
+              navigate("/");
+              toast.success("Register Successfully");
+            }else{
+              toast.info(`${data.message}`)
+            }
           } catch (error) {
             console.log(error.response);
             toast.error(error.response.data);
