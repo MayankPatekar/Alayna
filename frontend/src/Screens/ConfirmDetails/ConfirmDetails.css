@@ -40,4 +40,6 @@ h4 span{
 
 .total_end{
     text-align: end;
+    font-size: 16px;
+    font-weight: bold;
 }

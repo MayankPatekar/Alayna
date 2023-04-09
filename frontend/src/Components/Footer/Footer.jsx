@@ -14,12 +14,12 @@ export default function Footer(){
   <p className="footer-links">
     <a href="/" className="link-1">Home</a>
 
-    <a href="/about">About</a>
+ 
 
     <a href="/shop/men">Men</a>
     <a href="/shop/women">Women</a>
     <a href="/shop/kids">Kids</a>
-
+    <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </p>
 
@@ -30,7 +30,7 @@ export default function Footer(){
 
   <div>
     <i className="fa fa-map-marker"></i>
-    <p><span>107 Lab </span> SMT. Chandibai Himathmal<br/> Mansukhani College , ulhasnagar(west)</p>
+    <p><span>107 Lab </span> SMT. Chandibai Himathmal<br/> Mansukhani College , Ulhasnagar(west)</p>
   </div>
 
   <div>
@@ -47,7 +47,7 @@ export default function Footer(){
 
 <div className="footer-right">
 
-  <p style={{color: "white"}} className="footer-company-about">
+  <p className="footer-company-about">
     <span>About the company</span>
     E-commerce (electronic commerce) is the buying and selling of goods and services, or the transmitting of funds or data, over an electronic network, primarily the internet.
   </p>

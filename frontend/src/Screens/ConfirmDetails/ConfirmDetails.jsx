@@ -159,6 +159,7 @@ export default function ConfirmDetails() {
                       type="number"
                       name="points"
                       value={points}
+                      style={{width:'8rem'}}
                       onChange={handleChange}
                     />
                     <button className="btn btn-dark product-btn" style={{fontSize:'11px'}} onClick={handleApply}>
