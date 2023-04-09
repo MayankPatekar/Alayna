@@ -44,12 +44,12 @@ const reward = () => {
                     <img src={shop} alt="" className="points-img" />
                     <h3 className="points-txt">Shop</h3>
                 </div>
-                <p><i class="arrow"></i></p>
+                <p><i className="arrow"></i></p>
                 <div className="img-maker">
                     <img src={earn} alt="" className="points-img" />
                     <h3 className="points-txt">Earn</h3>
                 </div>
-                <p><i class="arrow"></i></p>
+                <p><i className="arrow"></i></p>
                 <div className="img-maker">
                     <div className="img-maker-flip">
                         <FlipImage />

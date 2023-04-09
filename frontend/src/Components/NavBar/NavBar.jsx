@@ -40,6 +40,7 @@ const NavBar = () => {
       </div>
     </div>
       <div className="social-icons">
+        
         <Link to="/search"><FaSistrix className="nav-icon" onMouseOver={({target})=>target.style.color="rgb(241, 156, 29)"}
     onMouseOut={({target})=>target.style.color="white"}/></Link>
         <Link to="/wishlist"><FaHeart className="nav-icon" onMouseOver={({target})=>target.style.color="red"}

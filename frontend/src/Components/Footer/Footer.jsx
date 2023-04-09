@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./Footer.css"
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 export default function Footer(){
     return(
         <>
@@ -13,15 +14,13 @@ export default function Footer(){
   <p className="footer-links">
     <a href="/" className="link-1">Home</a>
 
-    <a href="/">Seller</a>
+    <a href="/about">About</a>
 
-    <a href="/">Pricing</a>
+    <a href="/shop/men">Men</a>
+    <a href="/shop/women">Women</a>
+    <a href="/shop/kids">Kids</a>
 
-    <a href="/">About</a>
-
-    <a href="/">pages</a>
-
-    <a href="/">Contact</a>
+    <a href="/contact">Contact</a>
   </p>
 
   <p className="footer-company-name">Alayna © 2023</p>
@@ -31,7 +30,7 @@ export default function Footer(){
 
   <div>
     <i className="fa fa-map-marker"></i>
-    <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+    <p><span>107 Lab </span> SMT. Chandibai Himathmal<br/> Mansukhani College , ulhasnagar(west)</p>
   </div>
 
   <div>
@@ -55,10 +54,10 @@ export default function Footer(){
 
   <div className="footer-icons">
 
-    <a href="/"><i className="fa fa-facebook"></i></a>
-    <a href="/"><i className="fa fa-twitter"></i></a>
-    <a href="/"><i className="fa fa-linkedin"></i></a>
-    <a href="/"><i className="fa fa-github"></i></a>
+    <a href="/"><i className="fa fa-facebook"><FaInstagram /></i></a>
+    <a href="/"><i className="fa fa-twitter"><FaFacebookF /></i></a>
+    <a href="/"><i className="fa fa-linkedin"><FaYoutube/></i></a>
+    <a href="/"><i className="fa fa-github"><FaWhatsapp /></i></a>
 
   </div>
 

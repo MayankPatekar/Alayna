@@ -232,7 +232,7 @@ app.post("/signin", async (req, res) => {
       if (isMatch) {
         sendToken(user, 200, res);
       } else {
-        res.status(401).send({ message: "invalidpass" });
+        res.status(401).send({ message: "invalid password" });
       }
     } else {
       res.status(401).send({ message: "Invalid Username" });
@@ -672,8 +672,12 @@ app.put("/api/points/share", protect, async (req, res) => {
   const sender = req.user;
   const { Email, Amount } = req.body;
   const reciverEmail = Email;
-  const amount = Number(Amount);
-  console.log(Email)
+  if(sender.email === reciverEmail){
+res.send({message:"Can't share points"})
+  }else{
+
+    const amount = Number(Amount);
+    console.log(Email)
   console.log(typeof amount);
   try {
     console.log(typeof sender.points);
@@ -702,6 +706,7 @@ app.put("/api/points/share", protect, async (req, res) => {
   } catch (err) {
     res.send(err);
   }
+}
 });
 
 app.post("/email/:email", async (req, res) => {

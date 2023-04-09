@@ -61,6 +61,7 @@ const [currentPage, setCurrentPage] = useState(1);
     ));
     
   };
+  
     return(
         <div className="search-container">
         <div className="container form-group">
