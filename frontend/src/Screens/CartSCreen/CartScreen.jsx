@@ -68,23 +68,23 @@ export default function CartScreen() {
                     <button onClick={()=> handleRemoveFromCart(cartItem)}>Remove</button>
                   </div>
                 </div>
-                <div className="cart-product-price">
+                <div className="cart-product-price display-right">
                     {cartItem.Types.map((type)=>{
                     if(type.size===cartItem.SelectedSize){
-                       return <>{type.price}</> 
+                       return <>Rs. {type.price} /-</> 
                     }
                     return <></>
                     })
                     
                     }</div>
-                <div className="cart-product-quantity">
+                <div className="cart-product-quantity display-right">
                   <button onClick={()=>handleMinusCart(cartItem)}>-</button>
                   <div className="count">{cartItem.cartQuantity}</div>
                   <button onClick={()=>handleIncreaseQty(cartItem)}>+</button>
                 </div>
-                <div>
+                <div className="display-right">
                   {
-                    cartItem.points? <>{cartItem.points * cartItem.cartQuantity}</>:<>-</>
+                    cartItem.points? <><span className="view-none">Points :</span>{cartItem.points * cartItem.cartQuantity}</>:<><span className="view-none">Points :</span>0</>
                   }
                 </div>
                 <div className="cart-product-total-price">{cartItem.Types.map((type)=>{

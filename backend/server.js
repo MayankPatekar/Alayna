@@ -9,6 +9,8 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import crypto from "crypto";
 import nodemailer from "nodemailer";
+import * as dotenv from 'dotenv' 
+dotenv.config()
 
 const app = express();
 app.use(express.json());
@@ -16,7 +18,7 @@ app.use(express.urlencoded());
 app.use(cors());
 
 mongoose.connect(
-  "mongodb+srv://alayna2k23:XLrO7pHUEKiQREmq@cluster0.2ygko3y.mongodb.net/alayna?retryWrites=true&w=majority",
+  process.env.mongoose_connect,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -132,14 +134,14 @@ const sendEmail = (options) => {
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "alaynaweb@outlook.com", // sender email
-      pass: "pp4347@viksmaya", // sender password
+      user: process.env.outLook_user, // sender email
+      pass: process.env.outLook_pass, // sender password
     },
   });
 
   // console.log(options.to)
   const mailOptions = {
-    from: "alaynaweb@outlook.com",
+    from: process.env.outLook_user,
     to: options.to,
     subject: options.subject,
     html: options.text,
@@ -155,6 +157,13 @@ const sendEmail = (options) => {
     }
   });
 };
+function generateOrderId() {
+  const min = 100000;
+  const max = 999999;
+  const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+  const orderId = crypto.randomBytes(3).toString('hex') + randomNum;
+  return orderId;
+}
 
 const productSchema = new mongoose.Schema(
   {
@@ -183,6 +192,7 @@ const productSchema = new mongoose.Schema(
 // order Schema
 const orderSchema = new mongoose.Schema(
   {
+    OrderId:{type:String,require:true},
     Items: [],
     shippingDetails: [],
     userId: String,
@@ -438,6 +448,7 @@ app.post("/placeorder", protect, async (req, res, next) => {
   console.log(user);
   if (user.points >= applyPoints) {
     const order = new Order({
+      OrderId:generateOrderId(),
       Items: cartItems,
       shippingDetails: shippingInfo,
       userId: user._id,
@@ -699,6 +710,12 @@ res.send({message:"Can't share points"})
         console.log(reciver);
         await reciver.save();
         res.status(200).send({ message: "Loyalty points share successfully" });
+      const message=`<h2>${sender.fname}</h2> share you <h3>Rs. ${Amount}</h3> . check your profile to insure that you have recived it in your account`;
+        await sendEmail({
+        to : "mayankpatekar112345@gmail.com",
+        subject:`${sender.fname} send you points`,
+        text : message
+    })
       } else {
         res.send({ message: "insuffiecient amount" });
       }

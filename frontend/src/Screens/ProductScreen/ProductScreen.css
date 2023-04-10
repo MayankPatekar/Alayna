@@ -82,12 +82,14 @@
 
 .product-types{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-bottom: 20px;
 }
 .product-type{
     border: 1px solid black;
     padding: 5px 12px;
+    margin-right: 10px;
+    border-radius: 15px;
     cursor: pointer;
 }
 

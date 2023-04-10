@@ -164,3 +164,31 @@ margin-top: 1rem;
     flex-direction: column;
     align-items: center;
 }
+
+.view-none{
+    display: none;
+}
+
+@media only screen and (max-width:1020px){
+    .cart-container .titles{
+        display: none;
+    }
+    .cart-item{
+        display: block;
+    }
+    .display-right{
+        text-align: end;
+    }
+    .cart-product-quantity{
+        margin-left: auto;
+    }
+    .view-none{
+        display: inline-block;
+    }
+    .cart-summary{
+        display: block;
+    }
+    .cart-summary .clear-cart{
+        margin-bottom: 10px;
+    }
+}
