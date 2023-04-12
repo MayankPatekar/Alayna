@@ -710,7 +710,7 @@ res.send({message:"Can't share points"})
         console.log(reciver);
         await reciver.save();
         res.status(200).send({ message: "Loyalty points share successfully" });
-      const message=`<h2>${sender.fname}</h2> share you <h3>Rs. ${Amount}</h3> . check your profile to insure that you have recived it in your account`;
+      const message=`<p><strong>${sender.fname} ${sender.lname}</strong> share you <strong>Rs. ${Amount}</strong> .</p> <p>check your profile to insure that you have recived it in your account</p>`;
         await sendEmail({
         to : "mayankpatekar112345@gmail.com",
         subject:`${sender.fname} send you points`,

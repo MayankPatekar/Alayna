@@ -51,7 +51,7 @@ export default function ConfirmDetails() {
     try{
       console.log(applyPoints)
       const {data} = await axios.post("http://localhost:3001/placeorder",{cart,shipinfo,applyPoints},config)
-      navigate("/")
+      navigate("/orders")
       dispatch(clearCart())
       dispatch(clearInfo())
       console.log(data.message)
