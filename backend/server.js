@@ -446,9 +446,10 @@ app.post("/placeorder", protect, async (req, res, next) => {
   const totalAmount = cart.cartTotalAmount - applyPoints;
   const cartQuantity = cart.cartTotalQuantity;
   console.log(user);
+  const orderid = generateOrderId()
   if (user.points >= applyPoints) {
     const order = new Order({
-      OrderId:generateOrderId(),
+      OrderId:orderid,
       Items: cartItems,
       shippingDetails: shippingInfo,
       userId: user._id,
@@ -468,6 +469,22 @@ app.post("/placeorder", protect, async (req, res, next) => {
         res.send(err);
       } else {
         res.send({ message: "Order Placed successfully" });
+        const message=`<p><strong>${user.fname} ${user.lname}</strong> your order is been confirm.
+        </p><p>Your order id is #<strong>${orderid}</strong></p>
+        <p>Total Points Apply : <strong>${applyPoints}</strong></p>
+        <p>Total Amount : <strong>${totalAmount}</strong></p>
+        <p>Total Points Received : <strong>${pointRecivedToUser}</strong></p>
+        <p>check your profile to see the status of your order .</p>
+        <p>For any queries contact to us at `
+        +`<a href="mailto:alayna2k23@gmail.com">alayna2k23@gmail.com</a>`
+        +`</p>`
+        +`<h3>Happy shopping,<br/>Have a great day.</h3>
+        `;
+        sendEmail({
+        to : "mayankpatekar112345@gmail.com",
+        subject:`Your order is confirm with Alayna`,
+        text : message
+    })
       }
     });
     user.points = user.points - applyPoints;
