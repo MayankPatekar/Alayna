@@ -60,7 +60,9 @@ const handlePasswordBlur = () => {
         }
     }
     return(
-        <div className="forget-container">
+        <div className="sign-wrapper">
+
+        <div className="login-container">
             <div className="center-con">
             <img src="/logo/logo1.png" alt="logo" />
 
@@ -76,6 +78,7 @@ const handlePasswordBlur = () => {
                 </div>
 
             </div>
+        </div>
         </div>
     )
     
