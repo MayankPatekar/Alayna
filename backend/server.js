@@ -730,7 +730,7 @@ res.send({message:"Can't share points"})
       const message=`<p><strong>${sender.fname} ${sender.lname}</strong> share you <strong>Rs. ${Amount}</strong> .
       </p> <p>check your profile to insure that you have recived it in your account</p>`;
         await sendEmail({
-        to : reciver.email,s
+        to : reciver.email,
         subject:`${sender.fname} send you points`,
         text : message
     })
