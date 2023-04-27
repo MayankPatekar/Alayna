@@ -481,7 +481,7 @@ app.post("/placeorder", protect, async (req, res, next) => {
         +`<h3>Happy shopping,<br/>Have a great day.</h3>
         `;
         sendEmail({
-        to : "mayankpatekar112345@gmail.com",
+        to : user.email,
         subject:`Your order is confirm with Alayna`,
         text : message
     })
@@ -730,7 +730,7 @@ res.send({message:"Can't share points"})
       const message=`<p><strong>${sender.fname} ${sender.lname}</strong> share you <strong>Rs. ${Amount}</strong> .
       </p> <p>check your profile to insure that you have recived it in your account</p>`;
         await sendEmail({
-        to : "mayankpatekar112345@gmail.com",
+        to : reciver.email,s
         subject:`${sender.fname} send you points`,
         text : message
     })
